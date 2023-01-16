@@ -67,7 +67,7 @@
                 </div>
                 <input
                   type="text"
-                  class="form-control"
+                  class="form-control ageEl"
                   aria-label="Default"
                   aria-describedby="inputGroup-sizing-default"
                 />
@@ -109,7 +109,7 @@
                 </div>
                 <input
                   type="text"
-                  class="form-control"
+                  class="form-control heightEl"
                   aria-label="Default"
                   aria-describedby="inputGroup-sizing-default"
                 />
@@ -123,7 +123,7 @@
                 </div>
                 <input
                   type="text"
-                  class="form-control"
+                  class="form-control weightEl"
                   aria-label="Default"
                   aria-describedby="inputGroup-sizing-default"
                 />
@@ -131,7 +131,7 @@
               <!-- NON-EVERCISE ACTIVITY -->
               <p>
                 <button
-                  class="btn btn-light mt-4 w-100"
+                  class="btn btn-light mt-4 w-100 activityEL"
                   type="button"
                   data-toggle="collapse"
                   data-target="#non-evercise-collapse"
@@ -144,22 +144,28 @@
               <div class="collapse" id="non-evercise-collapse">
                 <div class="card card-body">
                   <button
-                    class="btn btn-light w-100 dropdown-element gender-btn"
+                    class="btn btn-light w-100 dropdown-element activityEl"
                     value="sedentary"
                   >
                     Sedentary (less than 5000 steps/day)
                   </button>
                   <button
-                    class="btn btn-light w-100 dropdown-element gender-btn"
+                    class="btn btn-light w-100 dropdown-element activityEl"
                     value="light active"
                   >
                     Light Active (6000-9000 steps/day)
                   </button>
                   <button
-                    class="btn btn-light w-100 dropdown-element gender-btn"
+                    class="btn btn-light w-100 dropdown-element activityEl"
                     value="active"
                   >
                     Active (10,000+ steps/day)
+                  </button>
+                  <button
+                    class="btn btn-light w-100 dropdown-element activityEl"
+                    value="very active"
+                  >
+                    Very Active (20,000+ steps/day or heavy laabour intensive job)
                   </button>
                 </div>
               </div>
@@ -179,62 +185,62 @@
               <div class="collapse" id="sessions-week">
                 <div class="card card-body">
                   <button
-                    class="btn btn-light w-100 dropdown-element gender-btn"
-                    value="sedentary"
+                    class="btn btn-light w-100 dropdown-element sessions-per-week"
+                    value="1"
                   >
                     1
                   </button>
                   <button
-                    class="btn btn-light w-100 dropdown-element gender-btn"
-                    value="light active"
+                    class="btn btn-light w-100 dropdown-element sessions-per-week"
+                    value="2"
                   >
                     2
                   </button>
                   <button
-                    class="btn btn-light w-100 dropdown-element gender-btn"
-                    value="active"
+                    class="btn btn-light w-100 dropdown-element sessions-per-week"
+                    value="3"
                   >
                     3
                   </button>
                   <button
-                    class="btn btn-light w-100 dropdown-element gender-btn"
-                    value="active"
+                    class="btn btn-light w-100 dropdown-element sessions-per-week"
+                    value="4"
                   >
                     4
                   </button>
                   <button
-                    class="btn btn-light w-100 dropdown-element gender-btn"
-                    value="active"
+                    class="btn btn-light w-100 dropdown-element sessions-per-week"
+                    value="5"
                   >
                     5
                   </button>
                   <button
-                    class="btn btn-light w-100 dropdown-element gender-btn"
-                    value="active"
+                    class="btn btn-light w-100 dropdown-element sessions-per-week"
+                    value="6"
                   >
                     6
                   </button>
                   <button
-                    class="btn btn-light w-100 dropdown-element gender-btn"
-                    value="active"
+                    class="btn btn-light w-100 dropdown-element sessions-per-week"
+                    value="7"
                   >
                     7
                   </button>
                   <button
-                    class="btn btn-light w-100 dropdown-element gender-btn"
-                    value="active"
+                    class="btn btn-light w-100 dropdown-element sessions-per-week"
+                    value="8"
                   >
                     8
                   </button>
                   <button
-                    class="btn btn-light w-100 dropdown-element gender-btn"
-                    value="active"
+                    class="btn btn-light w-100 dropdown-element sessions-per-week"
+                    value="9"
                   >
                     9
                   </button>
                   <button
-                    class="btn btn-light w-100 dropdown-element gender-btn"
-                    value="active"
+                    class="btn btn-light w-100 dropdown-element sessions-per-week"
+                    value="10"
                   >
                     10
                   </button>
@@ -256,15 +262,15 @@
               <div class="collapse" id="session-intensity">
                 <div class="card card-body">
                   <button
-                    class="btn btn-light w-100 dropdown-element gender-btn"
-                    value="sedentary"
+                    class="btn btn-light w-100 dropdown-element session-intensity"
+                    value="low"
                   >
                   Low: (Exercise with adequate rest & no difficulty talking or
                   breathing)
                   </button>
                   <button
-                    class="btn btn-light w-100 dropdown-element gender-btn"
-                    value="light active"
+                    class="btn btn-light w-100 dropdown-element session-intensity"
+                    value="moderate"
                   >
                   Moderate: (Exercise that
                   required adequate rest to catch
@@ -272,8 +278,8 @@
                   
                   </button>
                   <button
-                    class="btn btn-light w-100 dropdown-element gender-btn"
-                    value="active"
+                    class="btn btn-light w-100 dropdown-element session-intensity"
+                    value="high"
                   >
                   High: (Exercise that was
                   challenging throughout the
@@ -299,7 +305,7 @@
                     <div class="card result-card">
                         <div class="card-body">
                             <h6 class="card-title">Maintenance</h5>
-                            <p class="card-text">Cal Range</p>
+                            <p class="card-text maintenance">Cal Range</p>
                             <p class="card-text">macros</p>
                         </div>
                     </div>
