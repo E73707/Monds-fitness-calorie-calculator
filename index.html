@@ -4,6 +4,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/4f0b43d67b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Oswald:wght@500&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
@@ -11,6 +25,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./assets/stylesheet.css" />
+    
   </head>
   <body>
     <div>
@@ -61,8 +76,10 @@
               <!-- AGE -->
               <div class="input-group mt-4 age-input">
                 <div class="input-group-prepend">
-                  <span class="input-group-text" id="inputGroup-sizing-default"
-                    >Age</span
+                  <span
+                    class="input-group-text title-w text-inp"
+                    id="inputGroup-sizing-default"
+                    >Age:</span
                   >
                 </div>
                 <input
@@ -75,26 +92,27 @@
               <!-- GENDER -->
               <p>
                 <button
-                  class="btn btn-light mt-4 w-100"
+                  class="btn btn-light mt-4 w-100 title-w dropdown-btn"
                   type="button"
                   data-toggle="collapse"
                   data-target="#collapseExample"
                   aria-expanded="false"
                   aria-controls="collapseExample"
-                >
-                  Gender
+                > <p class="genderTitle">Gender</p>
+                  <p class="genderInput"> hellooo</p>
+                  <i class="fa-solid fa-caret-down icon"></i>
                 </button>
               </p>
               <div class="collapse" id="collapseExample">
                 <div class="card card-body">
                   <button
-                    class="btn btn-light w-100 dropdown-element gender-btn"
+                    class="btn btn-light w-100 dropdown-element gender-btn input-button"
                     value="male"
                   >
                     Male
                   </button>
                   <button
-                    class="btn btn-light w-100 dropdown-element gender-btn"
+                    class="btn btn-light w-100 dropdown-element gender-btn input-button"
                     value="female"
                   >
                     Female
@@ -103,8 +121,10 @@
               </div>
               <div class="input-group mt-4 height-input">
                 <div class="input-group-prepend">
-                  <span class="input-group-text" id="inputGroup-sizing-default"
-                    >Height</span
+                  <span
+                    class="input-group-text title-w text-inp"
+                    id="inputGroup-sizing-default"
+                    >Height(cm):</span
                   >
                 </div>
                 <input
@@ -117,8 +137,10 @@
               <!-- WEIGHT -->
               <div class="input-group mt-4 weight-input">
                 <div class="input-group-prepend">
-                  <span class="input-group-text" id="inputGroup-sizing-default"
-                    >Weight</span
+                  <span
+                    class="input-group-text title-w text-inp"
+                    id="inputGroup-sizing-default"
+                    >Weight(kg):</span
                   >
                 </div>
                 <input
@@ -131,115 +153,120 @@
               <!-- NON-EVERCISE ACTIVITY -->
               <p>
                 <button
-                  class="btn btn-light mt-4 w-100 activityEL"
+                  class="btn btn-light mt-4 w-100 title-w dropdown-btn"
                   type="button"
                   data-toggle="collapse"
                   data-target="#non-evercise-collapse"
                   aria-expanded="false"
                   aria-controls="collapseExample"
-                >
-                  Non-Evercise Activity:
+                > <p class="exercise-activity-title">Non-Evercise Activity:</p>
+                  <p class="exercise-activity-input">Test</p>
+                  <i class="fa-solid fa-caret-down icon"></i>
                 </button>
               </p>
               <div class="collapse" id="non-evercise-collapse">
-                <div class="card card-body">
-                  <button
-                    class="btn btn-light w-100 dropdown-element activityEl"
-                    value="sedentary"
+                <div class="card card-body collapsed-element">
+                  <li
+                    class="dropdown-element activityEl input-button"
+                    value="1"
                   >
                     Sedentary (less than 5000 steps/day)
-                  </button>
-                  <button
-                    class="btn btn-light w-100 dropdown-element activityEl"
-                    value="light active"
+                  </li>
+                  <li
+                    class="dropdown-element activityEl input-button"
+                    value="2"
                   >
                     Light Active (6000-9000 steps/day)
-                  </button>
-                  <button
-                    class="btn btn-light w-100 dropdown-element activityEl"
-                    value="active"
+                  </li>
+                  <li
+                    class="dropdown-element activityEl input-button"
+                    value="3"
                   >
                     Active (10,000+ steps/day)
-                  </button>
-                  <button
-                    class="btn btn-light w-100 dropdown-element activityEl"
-                    value="very active"
+                  </li>
+                  <li
+                    class="dropdown-element activityEl input-button"
+                    value="4"
                   >
-                    Very Active (20,000+ steps/day or heavy laabour intensive job)
-                  </button>
+                    Very Active (20,000+ steps/day or heavy laabour intensive
+                    job)
+                  </li>
                 </div>
               </div>
               <!-- SESSIONS PER WEEK -->
               <p>
                 <button
-                  class="btn btn-light mt-2 w-100 mb-0"
+                  class="btn btn-light mt-2 w-100 mb-0 title-w dropdown-btn"
                   type="button"
                   data-toggle="collapse"
                   data-target="#sessions-week"
                   aria-expanded="false"
                   aria-controls="collapseExample"
                 >
-                  Training Sessions/Week:
+                  <p class="sessions-num-title">Training Sessions/Week:</p>
+                  <p class="sessions-num-input">Test</p>
+                  <i class="fa-solid fa-caret-down icon"></i>
                 </button>
               </p>
               <div class="collapse" id="sessions-week">
-                <div class="card card-body">
+
+                <div class="card card-body sessions">
                   <button
-                    class="btn btn-light w-100 dropdown-element sessions-per-week"
+                    class="btn btn-light w-100 dropdown-element sessions-per-week input-button"
                     value="1"
                   >
                     1
                   </button>
                   <button
-                    class="btn btn-light w-100 dropdown-element sessions-per-week"
+                    class="btn btn-light w-100 dropdown-element sessions-per-week input-button"
                     value="2"
                   >
                     2
                   </button>
                   <button
-                    class="btn btn-light w-100 dropdown-element sessions-per-week"
+                    class="btn btn-light w-100 dropdown-element sessions-per-week input-button"
                     value="3"
                   >
                     3
                   </button>
                   <button
-                    class="btn btn-light w-100 dropdown-element sessions-per-week"
+                    class="btn btn-light w-100 dropdown-element sessions-per-week input-button"
                     value="4"
                   >
                     4
                   </button>
                   <button
-                    class="btn btn-light w-100 dropdown-element sessions-per-week"
+                    class="btn btn-light w-100 dropdown-element sessions-per-week input-button"
                     value="5"
                   >
                     5
                   </button>
                   <button
-                    class="btn btn-light w-100 dropdown-element sessions-per-week"
+                    class="btn btn-light w-100 dropdown-element sessions-per-week input-button"
                     value="6"
                   >
                     6
                   </button>
                   <button
-                    class="btn btn-light w-100 dropdown-element sessions-per-week"
+                    class="btn btn-light w-100 dropdown-element sessions-per-week input-button"
                     value="7"
                   >
                     7
                   </button>
                   <button
-                    class="btn btn-light w-100 dropdown-element sessions-per-week"
+                    class="btn btn-light w-100 dropdown-element sessions-per-week input-button"
                     value="8"
                   >
                     8
                   </button>
                   <button
-                    class="btn btn-light w-100 dropdown-element sessions-per-week"
+                    class="btn btn-light w-100 dropdown-element sessions-per-week input-button"
                     value="9"
                   >
                     9
                   </button>
                   <button
-                    class="btn btn-light w-100 dropdown-element sessions-per-week"
+                    class="btn btn-light w-100 dropdown-element sessions-per-week input-button"
                     value="10"
                   >
                     10
@@ -249,98 +276,98 @@
               <!-- SESSION INTENSITY -->
               <p>
                 <button
-                  class="btn btn-light mt-2 w-100"
+                  class="btn btn-light mt-2 w-100 title-w dropdown-btn"
                   type="button"
                   data-toggle="collapse"
                   data-target="#session-intensity"
                   aria-expanded="false"
                   aria-controls="collapseExample"
                 >
-                  Average Session Intensity
+                  
+                  <p class="session-intensity-title">Average Session Intensity:</p>
+                  <p class="session-intensity-input">test</p>
+                  <i class="fa-solid fa-caret-down icon"></i>
                 </button>
               </p>
               <div class="collapse" id="session-intensity">
-                <div class="card card-body">
-                  <button
-                    class="btn btn-light w-100 dropdown-element session-intensity"
-                    value="low"
+                <div class="card card-body collapsed-element">
+                  <li
+                    class="dropdown-element session-intensity input-button"
+                    value="1"
                   >
-                  Low: (Exercise with adequate rest & no difficulty talking or
-                  breathing)
-                  </button>
-                  <button
-                    class="btn btn-light w-100 dropdown-element session-intensity"
-                    value="moderate"
+                    Low: (Exercise with adequate rest & no difficulty talking or
+                    breathing)
+                  </li>
+                  <li
+                    class="dropdown-element session-intensity input-button"
+                    value="2"
                   >
-                  Moderate: (Exercise that
-                  required adequate rest to catch
-                  your breathe between sets)
-                  
-                  </button>
-                  <button
-                    class="btn btn-light w-100 dropdown-element session-intensity"
-                    value="high"
+                    Moderate: (Exercise that required adequate rest to catch
+                    your breathe between sets)
+                  </li>
+                  <li
+                    class="dropdown-element session-intensity input-button"
+                    value="3"
                   >
-                  High: (Exercise that was
-                  challenging throughout the
-                  duration with barely enough
-                  time to catch breathe)
-                  
-                  </button>
+                    High: (Exercise that was challenging throughout the duration
+                    with barely enough time to catch breathe)
+                  </li>
                 </div>
               </div>
-              <div class="w-100 align-content-center ml-auto mr-auto d-block text-center mt-3">
-                <button type="button" class="btn btn-light btn-sm submit-btn text-center mt-3">Submit</button>
-                </div>
+              <div
+                class="w-100 align-content-center ml-auto mr-auto d-block text-center mt-3"
+              >
+                <button
+                  type="button"
+                  class="btn btn-light btn-sm submit-btn text-center mt-3 title-w"
+                >
+                  Submit
+                </button>
+              </div>
             </div>
             <div class="results-container mt-4">
-                <div class="selections">
-                    <div class="card result-card">
-                        <div class="card-body">
-                          <h6 class="card-title">Lose Body Fat</h5>
-                          <p class="card-text">Cal Range</p>
-                          <p class="card-text">macros</p>
-                        </div>
+              <div class="selections">
+                <div>
+                  <p class="card-titles title">Lose Body Fat</p>
+                  <div class="card result-card">
+                    <div class="card-body">
+                      <p class="card-text lose">Cal Range</p>
+                      <p class="card-text Lose-macros">macros</p>
                     </div>
-                    <div class="card result-card">
-                        <div class="card-body">
-                            <h6 class="card-title">Maintenance</h5>
-                            <p class="card-text maintenance">Cal Range</p>
-                            <p class="card-text">macros</p>
-                        </div>
-                    </div>
-                    <div class="card result-card">
-                        <div class="card-body">
-                          <h6 class="card-title">Build muscle</h5>
-                          <p class="card-text">Cal Range</p>
-                          <p class="card-text">macros</p>
-                        </div>
-                    </div>
+                  </div>
                 </div>
-                <div class="instructions">
-
+                <div>
+                  <p class="card-titles title">Maintenance</p>
+                  <div class="card result-card">
+                    <div class="card-body">
+                      <p class="card-text maintenance">Cal Range</p>
+                      <p class="card-text maintenance-macros">macros</p>
+                    </div>
+                  </div>
                 </div>
+                <div>
+                  <p class="card-titles title">Build Muscle</p>
+                  <div class="card result-card">
+                    <div class="card-body">
+                      <p class="card-text gain">Cal Range</p>
+                      <p class="card-text gain-macros">macros</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="instructions"></div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-
+      
     <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      src="https://kit.fontawesome.com/4f0b43d67b.js"
       crossorigin="anonymous"
     ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="./assets/script.js"></script>
   </body>
 </html>
