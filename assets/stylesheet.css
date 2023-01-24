@@ -1,6 +1,10 @@
 body {
   background-image: url("../assets/img/calorie-calc-background.png");
   font-size: 16px;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 800px;
 }
 
 .logo-div {
