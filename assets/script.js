@@ -13,6 +13,10 @@ let loseMacrosEl = $(".lose-macros");
 let gainEl = $(".gain");
 let gainMactrosEl = $(".gain-macros");
 let inputBtnEl = $(".input-button");
+let genderInputEl = $(".genderInput");
+let sessionNumInput = $(".sessions-num-input");
+let nonExerciseInput = $(".exercise-activity-input");
+let sessionActivityInput = $(".session-intensity-input");
 
 let user = {
   age: undefined,
@@ -27,7 +31,15 @@ let user = {
 sessionIntensityEl.click(function (event) {
   event.preventDefault();
   user.averageSessionIntensity = this.value;
-  console.log(user.averageSessionIntensity);
+  let word;
+  if (this.value == 1) {
+    word = "Low";
+  } else if (this.value == 2) {
+    word = "Moderate";
+  } else if (this.value == 3) {
+    word = "High";
+  }
+  sessionActivityInput.text(word);
 });
 
 sessionsPerWeekEL.click(function (event) {
@@ -38,16 +50,29 @@ sessionsPerWeekEL.click(function (event) {
 genderEl.click(function (event) {
   event.preventDefault();
   user.gender = this.value;
+  genderInputEl.text(this.value);
 });
 
 activityEl.click(function (event) {
   event.preventDefault();
   user.exerciseActivity = this.value;
+  let word;
+  if (this.value == 1) {
+    word = "Sedentary";
+  } else if (this.value == 2) {
+    word = "Light Active";
+  } else if (this.value == 3) {
+    word = "Active";
+  } else if (this.value == 4) {
+    word = "Very Active";
+  }
+  nonExerciseInput.text(word);
 });
 
 sessionsPerWeekEL.click(function (event) {
   event.preventDefault();
   user.sessionsPerWeek = this.value;
+  sessionNumInput.text(this.value);
 });
 
 submitEl.click(function (event) {

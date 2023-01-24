@@ -176,14 +176,14 @@ button {
 
 .dropdown-btn {
   display: grid;
-  grid-template-columns: 15fr 7fr 1fr;
+  grid-template-columns: 15fr 8fr 1fr;
   grid-template-columns: auto minmax(3, 1fr);
   align-items: center;
   gap: auto;
 }
 
 .genderInput {
-  text-align: center;
+  text-align: left;
   align-items: center;
   margin: auto;
 }
@@ -198,6 +198,7 @@ button {
 
 .exercise-activity-input {
   margin: auto;
+  text-align: left;
 }
 
 .sessions-num-title {
@@ -207,7 +208,7 @@ button {
 
 .sessions-num-input {
   margin: auto;
-  position: relative;
+  text-align: left;
 }
 
 .session-intensity-title {
@@ -219,4 +220,22 @@ button {
 .session-intensity-input {
   margin: auto;
   position: relative;
+  text-align: left;
+}
+
+.logo {
+  min-width: 80px;
+}
+
+@media screen and (min-width: 817px) {
+  .input-container {
+    max-width: 600px;
+  }
+  .results-container {
+    max-width: 750px;
+    margin: auto;
+  }
+  .logo {
+    max-width: 138px;
+  }
 }
