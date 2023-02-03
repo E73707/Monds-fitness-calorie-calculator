@@ -17,6 +17,14 @@ let genderInputEl = $(".genderInput");
 let sessionNumInput = $(".sessions-num-input");
 let nonExerciseInput = $(".exercise-activity-input");
 let sessionActivityInput = $(".session-intensity-input");
+let genderBtnEl = $(".gender-btn-el");
+let genderCollapse = $(".gender-collapse");
+let nonExerciseBtn = $(".nonExerciseBtn");
+let nonExerciseCollapse = $(".non-exercise-collapse");
+let sessionNumBtnEl = $(".session-num-btn");
+let sessionNumCollapse = $(".session-num-collapse");
+let sessionIntensityBtnEl = $(".session-intensity-btn");
+let sessionIntensityCollapse = $(".session-intensity-collapse");
 
 let user = {
   age: undefined,
@@ -40,17 +48,14 @@ sessionIntensityEl.click(function (event) {
     word = "High";
   }
   sessionActivityInput.text(word);
-});
-
-sessionsPerWeekEL.click(function (event) {
-  event.preventDefault();
-  user.sessionsPerWeek = this.value;
+  $("#session-intensity").toggleClass("show");
 });
 
 genderEl.click(function (event) {
   event.preventDefault();
   user.gender = this.value;
   genderInputEl.text(this.value);
+  genderCollapse.toggleClass("show");
 });
 
 activityEl.click(function (event) {
@@ -66,6 +71,7 @@ activityEl.click(function (event) {
   } else if (this.value == 4) {
     word = "Very Active";
   }
+  nonExerciseCollapse.toggleClass("show");
   nonExerciseInput.text(word);
 });
 
@@ -73,6 +79,7 @@ sessionsPerWeekEL.click(function (event) {
   event.preventDefault();
   user.sessionsPerWeek = this.value;
   sessionNumInput.text(this.value);
+  sessionNumCollapse.toggleClass("show");
 });
 
 submitEl.click(function (event) {
@@ -95,11 +102,11 @@ submitEl.click(function (event) {
   maintenanceEl.text(`${maintenanceCals - 50} - ${maintenanceCals + 50} Kcals`);
   maintenanceMacrosEl.text(`${maintenanceMacros(maintenanceCals)}`);
 
-  let loseCals = maintenanceCals - maintenanceCals * 0.2;
+  let loseCals = Math.round(maintenanceCals - maintenanceCals * 0.2);
   loseEl.text(`${loseCals - 50} - ${loseCals + 50} Kcals`);
   loseMacrosEl.text(`${loseMacros(loseCals)}`);
 
-  let gainCals = maintenanceCals * 1.1;
+  let gainCals = Math.round(maintenanceCals * 1.1);
   gainEl.text(`${gainCals - 50} - ${gainCals + 50} Kcals`);
   gainMactrosEl.text(`${gainMacros(gainCals)}`);
 });
@@ -118,7 +125,7 @@ let calculateCals = function () {
   } else if (user.averageSessionIntensity == "2") {
     sessionWeekIntensity = midSessionIntensityFunc();
   } else if (user.averageSessionIntensity == "3") {
-    sessionWeekIntensity = midSessionIntensityFunc();
+    sessionWeekIntensity = highSessionIntensityFunc();
   }
 
   if (maleBmr) {
@@ -142,7 +149,7 @@ let calculateCals = function () {
       maintenance = VeryActiveFunc(femaleBmr) + sessionWeekIntensity;
     }
   }
-  console.log(maintenance);
+
   return Math.round(maintenance);
 };
 
@@ -151,15 +158,15 @@ let sedentaryFunc = function (bmr) {
 };
 
 let lightActiveFunc = function (bmr) {
-  return bmr * 1.1;
+  return bmr * 1.25;
 };
 
 let activeFunc = function (bmr) {
-  return bmr * 1.1;
+  return bmr * 1.4;
 };
 
 let VeryActiveFunc = function (bmr) {
-  return bmr * 1.1;
+  return bmr * 1.6;
 };
 
 let lowSessionIntensityFunc = function () {
@@ -203,15 +210,7 @@ let gainMacros = function (calories) {
   let fatCals = calories * 0.25;
   leftover = leftover - proteinCals - fatCals;
   let carbGrams = Math.round(leftover / 4);
-  return `P: ${proteinGrams} C: ${carbGrams} F: ${fatGrams}`;
+  return `P: ${proteinGrams} 
+    C: ${carbGrams} 
+    F: ${fatGrams}`;
 };
-
-// inputBtnEl.click((event) => {
-//   console.log(event.target.style.backgroundColor);
-//   if (event.target.style.backgroundColor == "rgb(200, 198, 198)") {
-//     console.log("true");
-//     event.target.style.backgroundColor = "#f8f9fa";
-//     return;
-//   }
-//   event.target.style.backgroundColor = "#C8C6C6";
-// });

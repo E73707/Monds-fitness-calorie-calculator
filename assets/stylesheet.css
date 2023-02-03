@@ -51,13 +51,6 @@ body {
   min-width: 100%;
 }
 
-/* .selections {
-  justify-content: space-evenly;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-} */
-
 .selections {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -70,6 +63,7 @@ body {
   margin: 7px;
   min-width: 30%;
   margin-top: 14px;
+  background-color: none;
 }
 
 @media screen and(min-width: 700px) {
@@ -145,8 +139,9 @@ button {
 }
 
 .card-text {
-  color: black;
+  color: white;
   font-family: "Oswald", sans-serif;
+  font-size: 14px;
 }
 
 .text-inp {
@@ -242,4 +237,9 @@ button {
   .logo {
     max-width: 138px;
   }
+}
+
+.collapse {
+  display: none;
+  transition: height 0.5s ease-in-out;
 }
